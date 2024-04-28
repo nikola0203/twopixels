@@ -1,19 +1,42 @@
-// h1,
-// .h1,
-// h2,
-// .h2,
-// h3,
-// .h3,
-// h4,
-// .h4,
-// h5,
-// .h5,
-// h6,
-// .h6 {
-  // text-transform: uppercase;
-// color: $primary;
-// font-weight: bold;
-// }
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: $black;
+  font-weight: bold;
+}
+
+.p-small {
+  @include font-size(16px);
+}
+
+.p-big {
+  @include font-size(19px);
+}
+
+h2 {
+  @include font-size(40px);
+}
+
+h4 {
+  font-size: 24px;
+}
+
+p {
+  color: $black;
+}
+
+ul {
+  list-style-type: none;
+}
 
 // h1,
 // .h1 {
@@ -73,20 +96,23 @@
 // 		}
 // 	}
 // }
-
 body {
+
   &.page-template-default,
   &.post-template-default {
+
     article.post,
     article.page {
       .entry-content {
         @include font-size(24px);
+
         p {
           @include margin-bottom(30px);
         }
       }
     }
   }
+
   // 	&:not(.single-post):not(.single-page) {
   // 		h2,
   // 		.h2 {

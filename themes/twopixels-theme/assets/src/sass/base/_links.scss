@@ -15,38 +15,70 @@ button {
 
 a {
   &.txt-primary {
+    color: $secondary;
+    @include font-size(16px);
+  }
+}
+
+a {
+  &.txt-black {
+    color: $black;
+
     &:hover,
     &:focus {
       color: $secondary;
-      svg {
-        fill: $secondary;
-      }
     }
+  }
+}
+
+h4 {
+  color: $black;
+  transition: all 0.3s ease-out;
+}
+
+a {
+  h4:hover {
+    transition: all 0.3s ease-out;
+    color: $secondary;
   }
 }
 
 a {
   &.txt-secondary {
+    color: $white;
+
     &:hover,
     &:focus {
-      color: $primary;
-      svg {
-        fill: $primary;
-      }
+      text-decoration: underline 2px;
     }
   }
 }
 
+a {
+  &.txt-small {
+    color: $secondary;
+    @include font-size(14px);
+
+    &:hover,
+    &:focus {
+      text-decoration: underline 2px;
+    }
+  }
+}
+
+
 .hover-text-primary {
   transition: color $time $ease;
-  > * {
+
+  >* {
     transition: color $time $ease;
   }
 
   &:hover,
   &:focus {
     color: $primary;
-    > * {
+
+    >* {
       color: $primary;
     }
   }

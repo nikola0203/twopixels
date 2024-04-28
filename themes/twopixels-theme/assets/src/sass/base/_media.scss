@@ -29,28 +29,30 @@ figure.wp-block-embed,
   }
 }
 
-.wp-block-embed {
-  .wp-block-embed__wrapper {
-    position: unset;
-  }
-}
+// .wp-block-embed {
+//   .wp-block-embed__wrapper {
+//     position: unset;
+//   }
+// }
 
-.html-video {
-  height: 366px;
-  @include media-breakpoint-up(lg) {
-    height: 566px;
-  }
-}
+// .html-video {
+//   height: 366px;
 
-#map,
-.footer-google-map,
-.contact-info-embed-google-map,
-.contact-info-google-map {
-  height: 250px;
-}
+//   @include media-breakpoint-up(lg) {
+//     height: 566px;
+//   }
+// }
+
+// #map,
+// .footer-google-map,
+// .contact-info-embed-google-map,
+// .contact-info-google-map {
+//   height: 250px;
+// }
 
 // images
 img {
+
   &,
   &.img-responsive {
     width: auto;
@@ -59,11 +61,26 @@ img {
   }
 }
 
+.img-hover {
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    filter: brightness(75%);
+  }
+}
+
+.img-height-180 {
+  height: 180px;
+  width: 100%;
+}
+
 .custom-logo {
   max-height: 60px;
+
   @include media-breakpoint-down(xxl) {
     max-width: 358px;
   }
+
   @include media-breakpoint-up(sm) {
     max-height: 100px;
   }
@@ -71,90 +88,52 @@ img {
 
 .footer-logo {
   max-height: 100px;
+
   @include media-breakpoint-up(sm) {
     max-height: 200px;
   }
 }
 
-.image-border-top-right {
-  border-top-right-radius: 30px;
-  @include media-breakpoint-up(sm) {
-    border-top-right-radius: 70px;
-  }
-}
-.image-border-bottom-right {
-  border-bottom-right-radius: 30px;
-  @include media-breakpoint-up(sm) {
-    border-bottom-right-radius: 70px;
-  }
-}
-.image-border-top-left {
-  border-top-left-radius: 30px;
-  @include media-breakpoint-up(sm) {
-    border-top-left-radius: 70px;
-  }
-}
-.image-border-bottom-left {
-  border-bottom-left-radius: 30px;
-  @include media-breakpoint-up(sm) {
-    border-bottom-left-radius: 70px;
-  }
-}
+// .image-border-top-right {
+//   border-top-right-radius: 30px;
+
+//   @include media-breakpoint-up(sm) {
+//     border-top-right-radius: 70px;
+//   }
+// }
+
+// .image-border-bottom-right {
+//   border-bottom-right-radius: 30px;
+
+//   @include media-breakpoint-up(sm) {
+//     border-bottom-right-radius: 70px;
+//   }
+// }
+
+// .image-border-top-left {
+//   border-top-left-radius: 30px;
+
+//   @include media-breakpoint-up(sm) {
+//     border-top-left-radius: 70px;
+//   }
+// }
+
+// .image-border-bottom-left {
+//   border-bottom-left-radius: 30px;
+
+//   @include media-breakpoint-up(sm) {
+//     border-bottom-left-radius: 70px;
+//   }
+// }
 
 .swiper-pagination-bullet {
   border: 1px solid $primary;
 }
 
-// .image-border {
-//   @include media-breakpoint-up(lg) {
-//     &::before,
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       @include bg-cover();
-//     }
-//     &.image-border-left {
-//       @include padding-top(30px);
-//       @include padding-left(30px);
-//       &::before {
-//         height: 33px;
-//         width: 33px;
-//         background-image: url("../img/icon-angle-90.svg");
-//         left: 0;
-//         top: 0;
-//       }
-//     }
-//     &.image-border-bottom-left {
-//       @include padding-bottom(30px);
-//       @include padding-left(30px);
-//       &::before {
-//         height: 33px;
-//         width: 33px;
-//         background-image: url("../img/icon-angle-90.svg");
-//         left: 0;
-//         bottom: 0;
-//         transform: rotate(-90deg);
-//       }
-//     }
-//     &.image-border-right {
-//       @include padding-bottom(30px);
-//       @include padding-right(30px);
-//       &::after {
-//         height: 33px;
-//         width: 33px;
-//         background-image: url("../img/icon-angle-90.svg");
-//         transform: rotate(-180deg);
-//         bottom: 0;
-//         right: 0;
-//       }
-//     }
-//   }
-// }
-
-// .natural-gallery-js {
-//   .natural-gallery-body {
-//     a.figure.zoomable {
-//       background-color: rgba($gray-200, 0.5);
-//     }
-//   }
-// }
+.icon-spinner {
+  height: 40px;
+  width: 40px;
+  background-image: url('../img/icon-spinner.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}

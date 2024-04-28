@@ -3,8 +3,21 @@
 *--------------------------*/
 
 // Color system
-$primary: #915447;
-$secondary: #192E40;
+$primary: #192F72;
+$secondary: #EA4900;
+
+$black: #000000;
+$dark-gray: #8E8E8E;
+$border-gray: #D9D9D9;
+$dark: #D9D9D9;
+
+$light: #F9F9F9;
+$info: #EAEAEA;
+$light-grey: #A3A1AB;
+$border-white-op: rgba(255, 255, 255, 0.2);
+
+$transparent: rgba(25, 47, 114, 0.1);
+
 $red: #E92E2C;
 $green: #7cd926;
 $orange: #EB8137;
@@ -13,9 +26,9 @@ $yellow: #F3A836;
 $black-100: #151a1f;
 
 // scss-docs-start gray-color-variables
-$white: #fff !default;
+$white: #FFFFFF !default;
 $gray-100: #F5F5F5;
-// $gray-200: #e9ecef !default;
+$gray-200: #888888;
 // $gray-300: #dee2e6 !default;
 // $gray-400: #ced4da !default;
 // $gray-500: #adb5bd !default;
@@ -51,10 +64,10 @@ $yellow-300: #E3E3DE;
 // scss-docs-start gray-color-variables
 // $white:    #fff !default;
 // $gray-100: #f7f7f7;
-$gray-200: #F4F4F4;
+$gray-200: #8E8E8E;
 $gray-300: #EAEAEA;
 // $gray-400: #ced4da !default;
-$gray-500: #ebf0f4;
+$gray-500: #D9D9D9;
 $gray-600: #666666;
 // $gray-700: #495057 !default;
 $gray-800: #313336 !default;
@@ -139,7 +152,7 @@ $nav-tabs-link-active-bg: transparent;
 $enable-negative-margins: true;
 
 // scss-docs-start spacer-variables-maps
-$spacer: 0.625rem;
+$spacer: 0.5rem;
 $spacers: (
   0: 0,
   1: calc($spacer / 2),
@@ -184,8 +197,7 @@ $container-max-widths: (
   md: 720px,
   lg: 975px,
   xl: 1255px,
-  xxl: 1435px
-) !default;
+  xxl: 1435px) !default;
 //1294
 
 // scss-docs-end container-max-widths
@@ -193,14 +205,16 @@ $container-max-widths: (
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-family-base: "Sora", sans-serif;
+$font-family-base: "Cabinet Grotesk",
+  sans-serif;
 // $font-family-secondary: "Mulish", sans-serif;
 // $font-size-base: 1.125rem;
 $font-weight-base: 300;
 
 // scss-docs-start headings-variables
 $headings-margin-bottom: $spacer * 1.5;
-$headings-font-family: "Ranade-Variable", serif;
+$headings-font-family: "Cabinet Grotesk",
+  sans-serif;
 // $headings-font-style:         null !default;
 $headings-font-weight: 400;
 // $headings-line-height:        1.2 !default;
@@ -232,7 +246,8 @@ $link-hover-color: $secondary;
 $paragraph-margin-bottom: 1.25rem;
 
 // scss-docs-start box-shadow-variables
-$box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+$box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1
+);
 // $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
 // $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 // $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
@@ -267,7 +282,7 @@ $border-widths: (
   8: 8px,
   9: 9px,
   10: 10px,
-) !default;
+  ) !default;
 
 // $border-style:                solid !default;
 $border-color: $yellow-100;
@@ -278,7 +293,7 @@ $border-color: $yellow-100;
 // $border-radius:               .375rem !default;
 // $border-radius-sm:            .25rem !default;
 // $border-radius-lg:            .5rem !default;
-$border-radius-xl:            0.625rem;
+$border-radius-xl: 0.625rem;
 // $border-radius-2xl:           2rem !default;
 // $border-radius-pill:          50rem !default;
 // scss-docs-end border-radius-variables

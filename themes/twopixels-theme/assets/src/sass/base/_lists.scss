@@ -6,10 +6,12 @@ ol {
 ul:not(.menu),
 ol {
   @include margin-bottom(20px);
+
   li {
     &::marker {
       color: $secondary;
     }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -17,11 +19,14 @@ ol {
 }
 
 body {
+
   &.page-template-default,
   &.post-template-default {
+
     article.post,
     article.page {
       .entry-content {
+
         ul:not(.menu),
         ol {
           li {
@@ -30,13 +35,16 @@ body {
             }
           }
         }
+
         b,
         strong {
           color: $primary;
         }
       }
+
       @include media-breakpoint-down(lg) {
         .entry-content {
+
           ul:not(.menu),
           ol {
             li {
@@ -45,8 +53,10 @@ body {
           }
         }
       }
+
       @include media-breakpoint-up(lg) {
         .entry-content {
+
           ul:not(.menu),
           ol {
             li {
@@ -69,9 +79,11 @@ ol.list-checkmark {
     font-weight: 900;
     display: flex;
     position: relative;
+
     &:last-child {
       margin-bottom: 0;
     }
+
     &::before {
       content: "";
       display: inline-block;
@@ -90,4 +102,3 @@ ol.list-checkmark {
     }
   }
 }
-

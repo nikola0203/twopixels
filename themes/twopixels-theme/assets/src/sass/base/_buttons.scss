@@ -4,36 +4,32 @@ button {
 
 .btn {
   display: inline-block;
-  @include padding(21px 50px);
-  @include font-size(24px);
-  border-radius: 40px;
+  @include padding(16px 24px);
+  @include font-size(16px);
+  border-radius: 8px;
+  font-weight: 700;
 }
 
 .wpforms-submit,
 .btn,
-.btn-menu > a {
-  // display: flex;
-  // justify-content: center;
-  // font-family: $headings-font-family;
-  font-weight: 300;
+.btn-menu>a {
   line-height: 1;
-  text-transform: uppercase;
   color: $white;
   text-align: center;
   background-color: $primary;
   border: 2px solid transparent;
   // box-shadow: 1px 1px 6px rgba($black, 0.25);
   cursor: pointer;
-  @include transition(
-    color $time $ease,
+  @include transition(color $time $ease,
     background-color $time $ease,
-    border $time $ease
-  );
+    border $time $ease );
 
   .icon-btn {
     margin-left: 5px;
+
     svg {
       vertical-align: top;
+
       path {
         @include transition(fill $time $ease);
       }
@@ -45,47 +41,54 @@ button {
   &:active {
     color: $white;
     background-color: darken($primary, 5%);
-    // border: none;
   }
 
   &.btn-white {
     color: $black;
     border: 1px solid $gray-200;
     background-color: $white;
+
     svg {
       path {
         transition: fill $time $ease;
       }
     }
+
     &:hover,
     &:focus,
     &:active {
       color: $white;
       background-color: $primary;
-      // .icon-btn {
-        svg {
-          path {
-            fill: $white;
-          }
+
+      svg {
+        path {
+          fill: $white;
         }
-      // }
+      }
     }
   }
+
   &.btn-big {
-    // @include padding(12px 70px);
     min-width: 244px;
   }
-  &.btn-red {
-    background-color: $red;
+
+  &.btn-orange-ghost {
+    color: $secondary;
+    background-color: $transparent;
+    border: 1px solid $secondary;
+
     &:hover,
     &:focus,
     &:active {
       color: $white;
-      background-color: darken($red, 10%);
+      background-color: $secondary;
+      border: 1px solid $secondary;
     }
   }
+
   &.btn-cyan {
     background-color: $cyan;
+
     &:hover,
     &:focus,
     &:active {
@@ -94,44 +97,71 @@ button {
       background-color: $secondary;
     }
   }
+
   &.btn-primary {
     color: $white;
-    border: 2px solid $black;
-    background-color: $primary;
-    &:hover,
+    background-color: $secondary;
+    border: none;
+
+    &:hover {
+      background-color: #C03C00;
+    }
+
     &:focus,
     &:active {
-      color: $primary;
-      background-color: $cyan;
+      background-color: #D34200;
       border: none;
     }
-  }
-  &.btn-secondary {
-    background-color: $blue-600;
-    color: $white;
-    &:hover,
-    &:focus,
-    &:active {
-      // border: 2px solid $secondary;
-      background-color: $blue-700;
+
+    &:disabled {
+      background-color: #EA4900;
+      opacity: 0.4;
     }
   }
-  &.btn-transparent {
-    color: $primary;
-    background-color: transparent;
-    border: 2px solid $primary;
+
+  &.btn-save-user {
+    color: $black;
+    background-color: $white;
+    border: 1px solid $border-gray;
+    text-align: center;
+
     &:hover,
     &:focus,
     &:active {
       color: $white;
-      background-color: $primary;
-      svg {
-        path {
-          fill: $white;
-        }
-      }
+      background-color: $secondary;
+      border: 1px solid $secondary;
     }
   }
+
+  &.btn-secondary {
+    background-color: $transparent;
+    color: $primary;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      // border: 2px solid $secondary;
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &.btn-transparent {
+    color: $white;
+    background-color: $transparent;
+    border: 1px solid $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $black;
+      background-color: $white;
+      border: 1px solid $white;
+    }
+  }
+
   &.btn-small {
     @include font-size(16px);
     @include padding(15px 40px);
@@ -144,24 +174,29 @@ button {
 }
 
 .btn-menu {
-  > a {
+  >a {
     display: flex;
     @include font-size(14px);
     @include padding(12px 35px);
     // @include padding(19px 24px);
-    transition: min-height $time $ease, background-color $time $ease, color $time $ease;;
+    transition: min-height $time $ease, background-color $time $ease, color $time $ease;
+    ;
+
     @include media-breakpoint-down(xl) {
       display: block;
     }
+
     @include media-breakpoint-up(xl) {
       align-items: center;
       min-height: 110px;
     }
   }
+
   &.btn-menu-transparent {
-    > a {
+    >a {
       color: $secondary;
       background-color: transparent;
+
       &:hover,
       &:focus {
         color: $white;
@@ -171,9 +206,30 @@ button {
   }
 }
 
+.search-submit {
+  color: $white;
+  background-color: $secondary;
+  border: none;
+
+  &:hover {
+    background-color: #C03C00;
+  }
+
+  &:focus,
+  &:active {
+    background-color: #D34200;
+    border: none;
+  }
+
+  &:disabled {
+    background-color: #EA4900;
+    opacity: 0.4;
+  }
+}
+
 nav.scroll-active {
   .btn-menu {
-    > a {
+    >a {
       min-height: 70px;
     }
   }
@@ -182,6 +238,7 @@ nav.scroll-active {
 .btn-close {
   right: 20px;
   top: 20px;
+
   &:hover,
   &:focus,
   &:active {
@@ -193,19 +250,13 @@ nav.scroll-active {
 
 // Mobile nav-menu toggle
 .navtoggle {
+
   // display: none;
   @include media-breakpoint-down(xl) {
-    // position: relative;
-    // display: flex;
-    // justify-content: end;
-    // align-items: center;
     height: 50px;
     width: 60px;
     z-index: 2;
-    // background: $secondary;
-    // cursor: pointer;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    // @include border-radius(16px);
 
     &__icon {
       position: relative;
@@ -245,6 +296,7 @@ nav.scroll-active {
     &--active {
       .navtoggle__icon {
         transform: scale(0.7) rotate(90deg);
+
         &:before {
           transform: rotate(-45deg) translate(-7px, -7px) scaleX(0.7);
         }
@@ -259,11 +311,13 @@ nav.scroll-active {
 
 .wp-block-button.has-medium-font-size {
   @include font-size(16px);
+
   a.wp-block-button__link {
     @include padding(20px 40px);
     line-height: 1;
     transition: background-color 300ms ease;
   }
+
   &:hover,
   &:focus,
   &:active {
@@ -272,7 +326,6 @@ nav.scroll-active {
     }
   }
 }
-// wp-block-button__link has-white-color has-text-color has-background has-text-align-center wp-element-button
 
 .wpforms-submit {
   @include font-size(16px);
@@ -287,17 +340,20 @@ nav.scroll-active {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
+
     input[type="submit"] {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
   }
+
   @include media-breakpoint-up(md) {
     input[type="email"] {
       flex-basis: 76%;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
+
     input[type="submit"] {
       flex-basis: 24%;
       border-top-left-radius: 0;
@@ -305,20 +361,3 @@ nav.scroll-active {
     }
   }
 }
-
-// .btn-group-pricing-plans {
-//   button.btn {
-//     &.active {
-//       color: $white;
-//       background-color: $secondary;
-//     }
-//   }
-//   .btn-pricing-plan-monthly {
-//     border-top-right-radius: 0;
-//     border-bottom-right-radius: 0;
-//   }
-//   .btn-pricing-plan-annual {
-//     border-top-left-radius: 0;
-//     border-bottom-left-radius: 0;
-//   }
-// }
