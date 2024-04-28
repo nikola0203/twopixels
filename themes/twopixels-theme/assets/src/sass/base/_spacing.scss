@@ -1,0 +1,22 @@
+body {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  width: 100%;
+	// max-width: 100px;
+  // border-top: 2px solid $gray-200;
+  opacity: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.subtitle-line {
+  hr {
+    display: block;
+    height: 2px;
+    background-color: $primary;
+  }
+}
