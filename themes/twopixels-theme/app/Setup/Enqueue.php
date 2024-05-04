@@ -48,8 +48,6 @@ class Enqueue
 		wp_dequeue_style( 'global-styles' );
 		wp_dequeue_style( 'classic-theme-styles' );
 
-		
-
 		// CSS
 		wp_enqueue_style( 'main', mix( 'css/style.css' ), [], '1.0.0', 'all' );
 
