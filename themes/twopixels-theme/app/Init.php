@@ -26,6 +26,7 @@ final class Init
 			Core\Comments::class,
 			Core\OptionsPages::class, 
 			Core\Shortcodes::class,
+			Core\Taxonomies::class,
 			// Core\PostTypes::class,
 			Setup\Setup::class,
 			Setup\Menus::class,
@@ -33,6 +34,7 @@ final class Init
 			Ajax\AjaxMethods::class,
 			Custom\Filters::class,
 			Custom\Custom::class,
+			Custom\Footer::class,
 			Plugins\Acf::class,
 			Plugins\AcfBlocks::class,
 		]; 

@@ -4,9 +4,8 @@ button {
 
 .btn {
   display: inline-block;
-  @include padding(16px 24px);
+  @include padding(24px 40px);
   @include font-size(16px);
-  border-radius: 8px;
   font-weight: 700;
 }
 
@@ -45,6 +44,7 @@ button {
 
   &.btn-white {
     color: $black;
+    padding: 16px 24px;
     border: 1px solid $gray-200;
     background-color: $white;
 
@@ -100,16 +100,16 @@ button {
 
   &.btn-primary {
     color: $white;
-    background-color: $secondary;
+    background-color: $primary;
     border: none;
 
     &:hover {
-      background-color: #C03C00;
+      background-color: lighten($primary, 15%);
     }
 
     &:focus,
     &:active {
-      background-color: #D34200;
+      background-color: lighten($primary, 15%);
       border: none;
     }
 

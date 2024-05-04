@@ -1,0 +1,21 @@
+{
+  "name": "acf/posts-categories",
+  "title": "Posts Categories",
+  "description": "Posts Categories Block",
+  "category": "acf-blocks",
+  "icon": "slides",
+  "keywords": [
+    "posts-categories"
+  ],
+  "viewScript": "posts-categories",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "posts-categories.php",
+    "postTypes": [
+      "page"
+    ]
+  },
+  "supports": {
+    "align": false
+  }
+}

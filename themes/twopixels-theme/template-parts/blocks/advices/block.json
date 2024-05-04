@@ -1,0 +1,21 @@
+{
+  "name": "acf/advices",
+  "title": "Advices",
+  "description": "Advices Block",
+  "category": "acf-blocks",
+  "icon": "slides",
+  "keywords": [
+    "advices"
+  ],
+  "viewScript": "advices",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "advices.php",
+    "postTypes": [
+      "page"
+    ]
+  },
+  "supports": {
+    "align": false
+  }
+}

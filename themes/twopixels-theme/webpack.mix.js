@@ -23,6 +23,7 @@ mix.disableSuccessNotifications();
 // Compile assets
 mix.js('assets/src/scripts/app.js', 'assets/dist/js')
 	.js('assets/src/scripts/admin.js', 'assets/dist/js')
+	.js('assets/src/scripts/blocks/popular-posts', 'assets/dist/js/blocks')
 	.extract([], 'js/vendor.js')
 	.sourceMaps()
 	.sass('assets/src/sass/style.scss', 'assets/dist/css')

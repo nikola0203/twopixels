@@ -109,13 +109,9 @@
 /*--------------------------------------------------------------
 # ACF layouts
 --------------------------------------------------------------*/
-// @import "blocks/about";
-// @import "blocks/info";
-// @import "blocks/popular-services";
-// @import "blocks/find-categories";
-// @import "blocks/recent-users";
-// @import "blocks/faq";
-// @import "blocks/chat";
+@import "blocks/advices";
+@import "blocks/posts-categories";
+@import "blocks/main-categories";
 
 /*--------------------------------------------------------------
 # Template parts
@@ -128,3 +124,4 @@
 --------------------------------------------------------------*/
 // @import "pages/archive";
 // @import "pages/single-post";
+@import "pages/about-us";

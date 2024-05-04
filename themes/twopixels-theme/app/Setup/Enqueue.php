@@ -12,6 +12,7 @@ class Enqueue
    *
    * @return
    */
+
 	public function register() 
 	{
 		// add_action( 'wp_head', array( $this, 'preconnect_google_font' ), 5 );
@@ -47,12 +48,16 @@ class Enqueue
 		wp_dequeue_style( 'global-styles' );
 		wp_dequeue_style( 'classic-theme-styles' );
 
+		
+
 		// CSS
 		wp_enqueue_style( 'main', mix( 'css/style.css' ), [], '1.0.0', 'all' );
 
 		// JS
 		wp_register_script( 'manifest', mix( 'js/manifest.js' ), [], '1.0.0', ['strategy' => 'async', 'in_footer' => true] );
 		wp_register_script( 'vendor', mix( 'js/vendor.js' ), [], '1.0.0', ['strategy' => 'async', 'in_footer' => true] );
+		// ACF Blocks.
+		wp_register_script( 'popular-posts', mix( 'js/blocks/popular-posts.js' ), ['manifest', 'vendor'], '1.0.0', ['strategy' => 'async', 'in_footer' => true] );
 
 		wp_enqueue_script( 'main', mix( 'js/app.js' ), ['manifest', 'vendor'], '1.0.0', true ); 
 

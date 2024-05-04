@@ -1,0 +1,22 @@
+{
+  "name": "acf/main-categories",
+  "title": "Main Categories",
+  "description": "Main Categories Block",
+  "category": "acf-blocks",
+  "icon": "slides",
+  "keywords": [
+    "main",
+    "categories"
+  ],
+  "viewScript": "main-categories",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "main-categories.php",
+    "postTypes": [
+      "page"
+    ]
+  },
+  "supports": {
+    "align": false
+  }
+}

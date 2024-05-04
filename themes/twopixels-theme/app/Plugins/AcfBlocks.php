@@ -28,7 +28,10 @@ class AcfBlocks
 		$blocks_dir = get_template_directory() . '/template-parts/blocks/';
 
 		$blocks_settings = array(
-			// 'hero_home' => $blocks_dir . 'hero-home',
+			'advices'              => $blocks_dir . 'advices',
+			'posts-categories'     => $blocks_dir . 'posts-categories',
+			'main-categories'	     => $blocks_dir . 'main-categories'	,
+			'popular-posts'	     	 => $blocks_dir . 'popular-posts'	,
 		);
 
 		return apply_filters( 'awpt_add_acf_block', $blocks_settings );

@@ -1,0 +1,30 @@
+.section-posts-categories,
+.section-popular-posts {
+  p {
+    @include media-breakpoint-up(lg) {
+      @include font-size(16px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include font-size(19px);
+    }
+  }
+
+  .category-wrapper {
+    height: 544px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media-breakpoint-down(lg) {
+      height: 400px;
+    }
+
+    li {
+      list-style: disc;
+
+      &::marker {
+        color: $white;
+      }
+    }
+  }
+}

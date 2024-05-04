@@ -15,3 +15,4 @@ endif;
 if ( class_exists( 'Awpt\\Init' ) ) :
 	Awpt\Init::register_services();
 endif;
+

@@ -31,6 +31,17 @@ a {
   }
 }
 
+a {
+  &.txt-white h4 {
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+  }
+}
+
 h4 {
   color: $black;
   transition: all 0.3s ease-out;
@@ -39,7 +50,7 @@ h4 {
 a {
   h4:hover {
     transition: all 0.3s ease-out;
-    color: $secondary;
+    color: darken($white, 30%);
   }
 }
 

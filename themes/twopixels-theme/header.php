@@ -8,7 +8,7 @@
  *
  * @package seo_one_click_theme
  */
-
+use Awpt\Plugins\Acf;
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -24,26 +24,24 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'seo_one_click_theme' ); ?></a>
-
-	<header id="masthead" class="site-header fixed-top">
-		<nav id="site-navigation" role="navigation" class="container d-xl-flex align-items-xl-center">
-			<div class="nav-logo-btn-wrapper d-flex align-items-center">
+	<header id="masthead" class="site-header bg-primary position-relative">
+		<nav id="site-navigation" role="navigation" class="container d-lg-flex align-items-lg-center">
+			<div class="pt-7 nav-logo-btn-wrapper d-flex align-items-center">
 				<?php Awpt\Custom\Custom::site_logo(); ?>
-				<div class="navtoggle relative d-flex justify-content-end align-items-center d-xl-none">
+				<div class="navtoggle relative d-flex justify-content-end align-items-center d-lg-none">
 					<div class="navtoggle__icon"></div>
 				</div>
 			</div>
-			<div class="ms-xl-auto">
+			<div class="ms-lg-auto mt-8">
 				<?php
 				if ( has_nav_menu( 'primary' ) ) :
 					wp_nav_menu(
 						array(
 							'theme_location'  => 'primary',
 							'menu_id'         => 'primary-menu',
-							'menu_class'      => 'menu d-xl-flex align-items-xl-center ps-0',
+							'menu_class'      => 'menu d-lg-flex align-items-lg-center ps-0',
 							'container_id'    => 'primary-menu-container',
-							'container_class' => 'ms-xl-auto',
+							'container_class' => 'ms-lg-auto',
 						)
 					);
 				endif;

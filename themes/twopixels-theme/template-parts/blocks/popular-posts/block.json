@@ -1,0 +1,22 @@
+{
+  "name": "acf/popular-posts",
+  "title": "Popular Posts",
+  "description": "Popular Posts Block",
+  "category": "acf-blocks",
+  "icon": "slides",
+  "keywords": [
+    "popular",
+    "posts"
+  ],
+  "viewScript": "popular-posts",
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "popular-posts.php",
+    "postTypes": [
+      "page"
+    ]
+  },
+  "supports": {
+    "align": false
+  }
+}

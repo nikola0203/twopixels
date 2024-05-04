@@ -18,7 +18,8 @@
 			"Awpt\\": "./app"
 		},
 		"files": [
-			"./app/Helpers.php"
+			"./app/Helpers.php",
+			"./app/SvgIcons.php"
 		]
 	}
 }
