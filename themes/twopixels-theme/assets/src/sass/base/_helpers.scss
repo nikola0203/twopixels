@@ -231,6 +231,12 @@
   }
 }
 
+.mb-lg-32 {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 120px;
+  }
+}
+
 .br-16 {
   border-radius: 16px;
 }

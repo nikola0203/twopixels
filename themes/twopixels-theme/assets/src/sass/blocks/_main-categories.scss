@@ -2,27 +2,28 @@
   padding: 120px 0 350px 0;
 }
 
-.section-posts {
-  margin-bottom: 120px;
+.section-posts,
+.section-popular-posts {
 
   .posts-wrapper {
     margin-top: -300px;
 
-    .post-wrapper {
-      height: 600px;
+  }
 
-      .category-wrapper {
-        top: 16px;
-        right: 16px;
-        box-shadow: 0px 4px 20px 0px #00000014;
-      }
+  .post-wrapper {
+    height: 600px;
 
-      li {
-        list-style-type: disc;
+    .category-wrapper {
+      top: 16px;
+      right: 16px;
+      box-shadow: 0px 4px 20px 0px #00000014;
+    }
 
-        &::marker {
-          color: $white;
-        }
+    li {
+      list-style-type: disc;
+
+      &::marker {
+        color: $white;
       }
     }
   }

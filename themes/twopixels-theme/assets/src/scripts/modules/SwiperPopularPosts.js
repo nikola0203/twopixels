@@ -37,7 +37,9 @@ class SwiperPopularPosts {
         slidesPerView: 1,
         // freeMode: true,
         // centeredSlides: true,
+        // height: 600,
         // loop: true,
+        speed: 400,
         spaceBetween: 24,
         pagination: {
           el: ".swiper-pagination-" + index,
@@ -50,13 +52,13 @@ class SwiperPopularPosts {
         // Responsive breakpoints
         breakpoints: {
           992: {
-            slidesPerView: 4
+            slidesPerView: 2
           },
-          // 1400: {
-          //   slidesPerView: 3,
-          //   spaceBetween: 150
-          // },
-        }
+          1400: {
+            slidesPerView: 3,
+            //   spaceBetween: 150
+          },
+        },
       })
     })
   }

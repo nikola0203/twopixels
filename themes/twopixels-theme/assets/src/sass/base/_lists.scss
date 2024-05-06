@@ -8,8 +8,10 @@ ol {
   @include margin-bottom(20px);
 
   li {
+    list-style-type: disc;
+
     &::marker {
-      color: $secondary;
+      color: $white;
     }
 
     &:last-child {

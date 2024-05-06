@@ -31,7 +31,7 @@ $archive_link = get_post_type_archive_link( 'post' );
     </div>
   </div>
 </section>
-<section class="section-posts">
+<section class="section-posts mb-12 mb-lg-32">
   <div class="container">
     <div class="posts-wrapper">
       <div class="row">

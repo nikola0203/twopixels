@@ -9,7 +9,7 @@ $title = get_field( 'title' );
 $advices = get_field( 'advices_repeater' );
 ?>
 
-<section class="section-advices mb-12">
+<section class="section-advices mb-lg-32">
   <div class="container">
     <h3 class="text-primary"><?php echo $title; ?></h3>
     <div class="row">
