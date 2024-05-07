@@ -22,6 +22,7 @@ class Menus
     register_nav_menus(
       array(
         'primary' => esc_html__( 'Primary Menu', 'awpt' ),
+        'secondary' => esc_html__( 'Secondary Menu', 'awpt' ),
       )
     );
   }

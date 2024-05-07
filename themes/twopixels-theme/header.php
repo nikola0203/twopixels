@@ -48,4 +48,5 @@ use Awpt\Plugins\Acf;
 				?>
 			</div>
 		</nav>
+		
 	</header><!-- #masthead -->
