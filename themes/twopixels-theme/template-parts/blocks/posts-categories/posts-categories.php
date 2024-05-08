@@ -8,6 +8,7 @@ use Awpt\Plugins\Acf;
 $title = get_field( 'title' );
 $text = get_field( 'text' );
 $taxonomies = get_field( 'post_category' );
+$archive_link = get_post_type_archive_link( 'post' );
 ?>
 
 <section class="section-posts-categories bg-light py-15 py-lg-30">
@@ -21,7 +22,7 @@ $taxonomies = get_field( 'post_category' );
           <p class="m-0 text-smaller"><?php echo $text; ?></p>
         </div>
         <div class="col-12 col-lg-4 d-lg-flex justify-content-lg-end align-items-lg-end">
-          <a href="" class="btn btn-primary">Pogledaj sve postove</a>
+          <a href="<?php echo esc_url( $archive_link ); ?>" class="btn btn-primary">Pogledaj sve postove</a>
         </div>
       </div>
     </div>

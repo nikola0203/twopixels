@@ -20,3 +20,7 @@ import NavMenu from './modules/nav-menu';
 const app = new App();
 // const slider = new Slider();
 new NavMenu();
+
+import SwiperSubCategories from './modules/SwiperSubCategories'
+
+new SwiperSubCategories()

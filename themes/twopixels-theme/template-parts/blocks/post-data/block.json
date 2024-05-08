@@ -1,0 +1,22 @@
+{
+  "name": "acf/post-data",
+  "title": "Post Data",
+  "description": "Post Data Block",
+  "category": "acf-blocks",
+  "icon": "slides",
+  "keywords": [
+    "post",
+    "data"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "post-data.php",
+    "postTypes": [
+      "page",
+      "post"
+    ]
+  },
+  "supports": {
+    "align": false
+  }
+}

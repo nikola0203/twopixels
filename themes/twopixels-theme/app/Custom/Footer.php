@@ -23,7 +23,7 @@ class Footer
       <?php
     }
   }
-
+  
   public static function copy()
   {
     $settings = get_field( 'footer_settings', 'option' );

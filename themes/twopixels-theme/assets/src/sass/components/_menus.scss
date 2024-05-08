@@ -1,0 +1,29 @@
+#secondary-menu-container {
+  ul {
+    margin-bottom: 0;
+  }
+
+  li {
+    padding: 24px 0;
+    margin-right: 40px;
+
+    a {
+      color: $info;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .current-menu-item {
+    padding-bottom: 20px;
+
+
+    a {
+      color: $white;
+    }
+
+    border-bottom: 4px solid $red ;
+  }
+}

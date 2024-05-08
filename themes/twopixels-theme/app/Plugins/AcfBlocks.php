@@ -28,10 +28,12 @@ class AcfBlocks
 		$blocks_dir = get_template_directory() . '/template-parts/blocks/';
 
 		$blocks_settings = array(
-			'advices'              => $blocks_dir . 'advices',
-			'posts-categories'     => $blocks_dir . 'posts-categories',
-			'main-categories'	     => $blocks_dir . 'main-categories'	,
-			'popular-posts'	     	 => $blocks_dir . 'popular-posts'	,
+			'advices'          => $blocks_dir . 'advices',
+			'posts-categories' => $blocks_dir . 'posts-categories',
+			'main-categories'  => $blocks_dir . 'main-categories',
+			'popular-posts'    => $blocks_dir . 'popular-posts',
+			'post-data'        => $blocks_dir . 'post-data',
+			'post-plants'      => $blocks_dir . 'post-plants',
 		);
 
 		return apply_filters( 'awpt_add_acf_block', $blocks_settings );

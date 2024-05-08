@@ -9,7 +9,6 @@ $secondary: #EA4900;
 $black: #000000;
 $dark-gray: #8E8E8E;
 $border-gray: #D9D9D9;
-$dark: #242424;
 
 $light: #F5F4F2;
 $info: #909090;
@@ -23,6 +22,7 @@ $green: #7cd926;
 $orange: #EB8137;
 $yellow: #F3A836;
 $gray: #D4D4D4;
+$dark: #D4D4D4;
 
 
 $black-100: #151a1f;
@@ -109,7 +109,6 @@ $success: $green !default;
 $info: $blue-700 !default;
 // $warning:       $yellow !default;
 // $danger:        $red !default;
-$light: $gray-500;
 $dark: $gray-800 !default;
 // scss-docs-end theme-color-variables
 

@@ -54,7 +54,6 @@ class Enqueue
 		// JS
 		wp_register_script( 'manifest', mix( 'js/manifest.js' ), [], '1.0.0', ['strategy' => 'async', 'in_footer' => true] );
 		wp_register_script( 'vendor', mix( 'js/vendor.js' ), [], '1.0.0', ['strategy' => 'async', 'in_footer' => true] );
-		wp_register_script( 'sub-categories', mix( 'js/sub-categories.js' ), ['manifest', 'vendor'], '1.0.0', ['strategy' => 'async', 'in_footer' => true] );
 		// ACF Blocks.
 		wp_register_script( 'popular-posts', mix( 'js/blocks/popular-posts.js' ), ['manifest', 'vendor'], '1.0.0', ['strategy' => 'async', 'in_footer' => true] );
 

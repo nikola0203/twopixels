@@ -78,7 +78,6 @@ $taxonomies  = ( ! empty( $settings['taxonomy'] ) ) ? $settings['taxonomy'] : ''
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
 
 </body>

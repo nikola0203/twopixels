@@ -8,6 +8,7 @@ use Awpt\Plugins\Acf;
 $title = get_field( 'title' );
 $text = get_field( 'text' );
 $posts = get_field( 'post' );
+$archive_link = get_post_type_archive_link( 'post' );
 
 ?>
 
@@ -22,7 +23,7 @@ $posts = get_field( 'post' );
           <p class="m-0 text-smaller"><?php echo $text; ?></p>
         </div>
         <div class="col-12 col-lg-4 d-lg-flex justify-content-lg-end align-items-lg-end">
-          <a href="" class="btn btn-primary">Pogledaj sve postove</a>
+          <a href="<?php echo esc_url($archive_link); ?>" class="btn btn-primary">Pogledaj sve postove</a>
         </div>
       </div>
     </div>

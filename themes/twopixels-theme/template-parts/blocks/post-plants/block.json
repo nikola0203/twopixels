@@ -1,0 +1,22 @@
+{
+  "name": "acf/post-plants",
+  "title": "Post Plants",
+  "description": "Post Plants Block",
+  "category": "acf-blocks",
+  "icon": "slides",
+  "keywords": [
+    "post",
+    "plants"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "post-plants.php",
+    "postTypes": [
+      "page",
+      "post"
+    ]
+  },
+  "supports": {
+    "align": false
+  }
+}

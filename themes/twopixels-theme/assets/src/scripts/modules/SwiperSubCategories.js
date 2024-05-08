@@ -10,10 +10,10 @@ import { Pagination, Navigation } from "swiper/modules"
 
 class SwiperSubCategories {
   constructor() {
-    this.subCategories()
+    this.popularPosts()
   }
 
-  subCategories = () => {
+  popularPosts = () => {
     const slides = document.querySelectorAll(".sub-categories")
 
     slides.forEach((slider, index) => {
@@ -52,10 +52,10 @@ class SwiperSubCategories {
         // Responsive breakpoints
         breakpoints: {
           992: {
-            slidesPerView: 2
+            slidesPerView: 4
           },
-          1400: {
-            slidesPerView: 3,
+          1200: {
+            slidesPerView: 6,
             //   spaceBetween: 150
           },
         },

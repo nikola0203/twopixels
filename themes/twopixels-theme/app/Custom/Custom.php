@@ -64,7 +64,7 @@ class Custom
       <?php
     }
   }
-
+   
   /**
 	 * Custom get excerpt
 	 *

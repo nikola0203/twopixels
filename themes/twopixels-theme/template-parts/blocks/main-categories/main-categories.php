@@ -18,7 +18,7 @@ $archive_link = get_post_type_archive_link( 'post' );
     <p class="text-white text-center"><?php echo $text; ?></p>
     <div class="categories-wrapper">
       <ul class="text-center p-0">
-        <a href="" class="btn btn-white align-items-center mb-4 me-2"><li class="d-flex">Svi postovi</li></a>
+        <a href="<?php echo esc_url($archive_link); ?>" class="btn btn-white align-items-center mb-4 me-2"><li class="d-flex">Svi postovi</li></a>
         <?php
         foreach ( $taxonomies as $key => $taxonomy ):
           $term_link = get_term_link( $taxonomy );
