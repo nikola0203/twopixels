@@ -98,7 +98,7 @@ $count_posts = count($posts);
           </div>
           <?php
         endif;
-      if ( $term_object->parent == 0 ):
+      if ( $term_object->parent == 0  && $term_object->count > 0 ):
         ?>
         <div class="sub-title-wrapper mb-10 mb-lg-18 pt-18">
           <div class="row">
