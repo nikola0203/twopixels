@@ -17,6 +17,7 @@ use Awpt\Plugins\Acf;
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="RolDCkBPQ6-rmFCpJ-GlRs1v64NM3I8oSN5ZOfVyUOw" />
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	
 
 	<?php wp_head(); ?>
 </head>

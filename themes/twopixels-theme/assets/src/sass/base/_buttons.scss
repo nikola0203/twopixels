@@ -86,15 +86,15 @@ button {
     }
   }
 
-  &.btn-cyan {
-    background-color: $cyan;
+  &.btn-red {
+    background-color: $red;
 
     &:hover,
     &:focus,
     &:active {
-      color: $black;
-      border: 2px solid $cyan;
-      background-color: $secondary;
+      color: $white;
+      border: 2px solid $primary;
+      background-color: darken($red, 20%);
     }
   }
 

@@ -45,7 +45,7 @@ $archive_link = get_post_type_archive_link( 'post' );
             $post_link = get_permalink($post['post']);
             ?>
             <div class="col-lg-6">
-              <div class="post-wrapper mb-12 mb-lg-0 position-relative d-flex align-items-end" style="background-image: url(<?php echo $image; ?>)">
+              <div class="post-wrapper mb-12 mb-lg-0 position-relative d-flex align-items-end bg-cover" style="background-image: url(<?php echo $image; ?>)">
                 <?php
                 foreach ( $categories as $category ):
                   if ( $category->parent != 0 ):

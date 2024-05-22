@@ -1,0 +1,22 @@
+{
+  "name": "acf/post-share",
+  "title": "Post Share",
+  "description": "Post Share Block",
+  "category": "acf-blocks",
+  "icon": "slides",
+  "keywords": [
+    "post",
+    "share"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "post-share.php",
+    "postTypes": [
+      "page",
+      "post"
+    ]
+  },
+  "supports": {
+    "align": false
+  }
+}

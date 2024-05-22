@@ -146,4 +146,66 @@ class Custom
 			get_template_part( 'template-parts/content', 'none' );
     }
   }
+  public static function getPopularPosts($posts) 
+  {
+    foreach ( $posts as $post ) :
+      $image = get_the_post_thumbnail_url($post);
+      $date = get_the_date('M, Y',$post);
+      $post_title = $post->post_title;
+      $post_link = get_permalink($post);
+      $categories = get_the_category($post->ID);
+      ?>
+      <div class="swiper-slide">
+        <div class="post-wrapper mb-12 mb-lg-0 position-relative d-flex align-items-end h-100 bg-cover" style="background-image: url(<?php echo $image; ?>)">
+          <?php
+          foreach ( $categories as $category ):
+            if ( $category->parent != 0 ):
+              ?>
+              <div class="category-wrapper position-absolute h-auto py-4 px-8 bg-white" >
+                <span><?php echo $category->name; ?></span>
+              </div>
+              <?php
+            endif;
+          endforeach;
+          ?>
+          <div class="post-info-wrapper px-12 mb-12">
+            <ul class="p-0 mb-4"><li class="text-white ms-6"><?php echo $date; ?></li></ul>
+            <a href="<?php echo esc_url( $post_link ); ?>"><h3 class="text-white"><?php echo $post_title; ?></h3></a>
+          </div>
+        </div>
+      </div>
+      <?php 
+    endforeach;
+  }
+
+  public static function recentPosts($posts) {
+    foreach ( $recent_posts as $key => $post ) :
+      $image = get_the_post_thumbnail_url($post);
+      $date = get_the_date('M, Y',$post);
+      $post_title = $post->post_title;
+      $post_link = get_permalink($post);
+      $categories = get_the_category($post->ID);
+      ?>
+      <div class="col-6">
+        <div class="post-wrapper mb-12 mb-lg-0 position-relative d-flex align-items-end h-100" style="background-image: url(<?php echo $image; ?>)">
+          <?php
+          foreach ( $categories as $category ):
+            if ( $category->parent != 0 ):
+              ?>
+              <div class="category-wrapper position-absolute h-auto py-4 px-8 bg-white" >
+                <span><?php echo $category->name; ?></span>
+              </div>
+              <?php
+            endif;
+          endforeach;
+          ?>
+          <div class="post-info-wrapper px-12 mb-12">
+            <ul class="p-0 mb-4"><li class="text-white ms-6"><?php echo $date; ?></li></ul>
+            <a href="<?php echo esc_url( $post_link ); ?>"><h3 class="text-white"><?php echo $post_title; ?></h3></a>
+          </div>
+        </div>
+      </div>
+      <?php 
+    endforeach;
+  }
 }

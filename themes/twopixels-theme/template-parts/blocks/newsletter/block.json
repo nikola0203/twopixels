@@ -1,0 +1,20 @@
+{
+  "name": "acf/newsletter",
+  "title": "Newsletter",
+  "description": "Newsletter Block",
+  "category": "acf-blocks",
+  "icon": "slides",
+  "keywords": [
+    "newsletter"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "newsletter.php",
+    "postTypes": [
+      "page"
+    ]
+  },
+  "supports": {
+    "align": false
+  }
+}

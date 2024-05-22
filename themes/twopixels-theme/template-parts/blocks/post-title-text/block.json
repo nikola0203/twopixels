@@ -1,0 +1,22 @@
+{
+  "name": "acf/post-title-text",
+  "title": "Post Title Text",
+  "description": "Post Title Text Block",
+  "category": "acf-blocks",
+  "icon": "slides",
+  "keywords": [
+    "title",
+    "text"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "post-title-text.php",
+    "postTypes": [
+      "page",
+      "post"
+    ]
+  },
+  "supports": {
+    "align": false
+  }
+}

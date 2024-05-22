@@ -1,0 +1,22 @@
+{
+  "name": "acf/post-two-column",
+  "title": "Post Two Column",
+  "description": "Post two-column Block",
+  "category": "acf-blocks",
+  "icon": "slides",
+  "keywords": [
+    "post",
+    "two-column"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "post-two-column.php",
+    "postTypes": [
+      "page",
+      "post"
+    ]
+  },
+  "supports": {
+    "align": false
+  }
+}

@@ -18,6 +18,7 @@ $youtube_link  = ( ! empty( $settings['youtube_link'] ) ) ? $settings['youtube_l
 $taxonomies  = ( ! empty( $settings['taxonomy'] ) ) ? $settings['taxonomy'] : '';
 ?>
 
+
 	<footer id="colophon" class="site-footer bg-primary py-12 pt-md-22 pb-md-12 text-white">
 		<div class="site-info">
 			<div class="container">

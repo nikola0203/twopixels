@@ -16,18 +16,6 @@ class Comments
   {
     add_action( 'admin_init', array( $this, 'remove_and_redirect_from_admin_dashboard' ) );
 
-    // Close comments on the front-end
-    add_filter( 'comments_open', '__return_false', 20, 2 );
-    add_filter( 'pings_open', '__return_false', 20, 2 );
-
-    // Hide existing comments
-    add_filter( 'comments_array', '__return_empty_array', 10, 2 );
-
-    // Remove comments page in menu
-    add_action( 'admin_menu', array( $this, 'remove_comments_page_in_menu' ) );
-
-    // Remove comments links from admin bar
-    add_action( 'init', array( $this, 'remove_comments_links_from_admin_bar' ) );
 
     // Disable gutemberg
     add_filter( 'gutenberg_can_edit_post_type', array( $this, 'disable_gutenberg' ), 10, 2 );
@@ -47,29 +35,8 @@ class Comments
       exit;
     }
   
-    // Remove comments metabox from dashboard
-    remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
-  
-    // Disable support for comments and trackbacks in post types
-    foreach ( get_post_types() as $post_type ) {
-      if ( post_type_supports( $post_type, 'comments') ) {
-        remove_post_type_support( $post_type, 'comments' );
-        remove_post_type_support( $post_type, 'trackbacks' );
-      }
-    }
   }
     
-  public function remove_comments_page_in_menu()
-  {
-    remove_menu_page( 'edit-comments.php' );
-  }
-
-  public function remove_comments_links_from_admin_bar()
-  {
-    if ( is_admin_bar_showing() ) {
-      remove_action( 'admin_bar_menu', 'wp_admin_bar_comments_menu', 60 );
-    }
-  }
     
   /**
    * Templates and Page IDs without editor

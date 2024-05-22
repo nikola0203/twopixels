@@ -28,13 +28,14 @@ $archive_link = get_post_type_archive_link( 'post' );
     </div>
     <div class="row">
       <?php
+      if ( $taxonomies ):
         foreach ( $taxonomies as $key => $taxonomy ):
           $image = get_field('category_image', $taxonomy);
           $link = get_term_link( $taxonomy );
             if ( $key < 6 ):
               ?>
               <div class="col-md-6 col-xl-4 mb-8">
-                <div class="category-wrapper d-flex flex-column justify-content-end" style="background-image: url(<?php echo $image['url']; ?>)">
+                <div class="category-wrapper d-flex flex-column justify-content-end bg-cover" style="background-image: url(<?php echo $image['url']; ?>)">
                   <a href="<?php echo esc_url( $link ); ?>"><h4 class="txt-white ms-12 lh-1 mb-2"><?php echo $taxonomy->name; ?></h4></a>
                   <ul class="p-0 ms-16">
                     <li class="text-white mb-12"><?php echo $taxonomy->count; ?> posta</li>
@@ -44,6 +45,7 @@ $archive_link = get_post_type_archive_link( 'post' );
               <?php
             endif;
         endforeach;
+      endif;
       ?>
     </div>
   </div>

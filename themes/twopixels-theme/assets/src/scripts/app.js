@@ -24,3 +24,8 @@ new NavMenu();
 import SwiperSubCategories from './modules/SwiperSubCategories'
 
 new SwiperSubCategories()
+
+import SwiperRecentPosts from './modules/SwiperRecentPosts'
+
+new SwiperRecentPosts()
+

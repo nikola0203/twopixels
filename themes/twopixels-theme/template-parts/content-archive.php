@@ -2,6 +2,7 @@
 /*
   Template Name: About Us
 
+
 */
 use Awpt\Plugins\Acf;
 get_header();
@@ -21,6 +22,7 @@ $terms_args = [
 ];
 $terms = get_terms($terms_args);
 $count = count($terms);
+$count_posts = count($posts);
 ?>
   <section class="archive-menu bg-primary mb-lg-22">
 		<nav id="site-navigation" role="navigation" class="container d-lg-flex align-items-lg-center">
@@ -57,7 +59,7 @@ $count = count($terms);
             <p class="m-0 text-primary"><?php echo $term_object->description; ?></p>
           </div>
           <div class="col-12 col-lg-4 d-lg-flex justify-content-lg-end align-items-lg-end">
-            <span class="text-primary fw-bold"><?php echo $count; ?> <?php echo ( $term_object->parent == 0 ) ? 'vrhova' : 'postova'; ?></span>
+            <span class="text-primary fw-bold"><?php echo ( $term_object->parent == 0 ) ? $count : $count_posts; ?> <?php echo ( $term_object->parent == 0 ) ? 'vrhova' : 'postova'; ?></span>
           </div>
         </div>
       </div>

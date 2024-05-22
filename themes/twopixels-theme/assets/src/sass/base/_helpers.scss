@@ -237,8 +237,20 @@
   }
 }
 
+.py-lg-32 {
+  @include media-breakpoint-up(lg) {
+    padding: 120px 0 !important;
+  }
+}
+
 .br-16 {
   border-radius: 16px;
+}
+
+.border-lg-start {
+  @include media-breakpoint-up(lg) {
+    border-left: 1px solid $gray;
+  }
 }
 
 .z-index-1 {

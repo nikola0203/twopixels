@@ -11,7 +11,7 @@
       color: $info;
 
       &:hover {
-        color: $white;
+        color: darken($white, 30%);
       }
     }
   }

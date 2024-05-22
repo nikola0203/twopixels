@@ -1,0 +1,22 @@
+{
+  "name": "acf/post-author",
+  "title": "Post Author",
+  "description": "Post Author Block",
+  "category": "acf-blocks",
+  "icon": "slides",
+  "keywords": [
+    "post",
+    "author"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "post-author.php",
+    "postTypes": [
+      "page",
+      "post"
+    ]
+  },
+  "supports": {
+    "align": false
+  }
+}

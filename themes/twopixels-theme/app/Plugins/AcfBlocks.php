@@ -34,6 +34,12 @@ class AcfBlocks
 			'popular-posts'    => $blocks_dir . 'popular-posts',
 			'post-data'        => $blocks_dir . 'post-data',
 			'post-plants'      => $blocks_dir . 'post-plants',
+			'post-two-column'  => $blocks_dir . 'post-two-column',
+			'post-share'       => $blocks_dir . 'post-share',
+			'post-author'      => $blocks_dir . 'post-author',
+			'newsletter'       => $blocks_dir . 'newsletter',
+			'post-title-text'  => $blocks_dir . 'post-title-text',
+
 		);
 
 		return apply_filters( 'awpt_add_acf_block', $blocks_settings );
