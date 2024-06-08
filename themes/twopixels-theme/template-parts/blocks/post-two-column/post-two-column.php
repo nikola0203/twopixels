@@ -11,7 +11,7 @@ $text       = get_field('text');
 $image      = get_field('image');
 ?>
 
-<section class="post-two-columns bg-light py-18 my-18">
+<section class="post-two-columns bg-light py-12 py-lg-12 my-18">
   <div class="row <?php echo ( $image_left == 1 ) ? 'flex-row-reverse' : ''; ?>">
     <div class="col-12 col-lg-6 <?php echo ( $image_left == 1 ) ? '' : 'mt-xl-8'; ?>">
       <h4><?php echo $title; ?></h4>

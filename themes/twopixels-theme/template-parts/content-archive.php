@@ -114,27 +114,42 @@ $count_posts = count($posts);
       endif;
       ?>
       <div class="row">
-        <?php 
-        foreach ( $posts as $key => $post ) :
-          $image = get_the_post_thumbnail_url($post);
-          $date = get_the_date('M, Y',$post);
-          $post_title = $post->post_title;
-          $post_link = get_permalink($post);
-            ?>
-            <div class="col-lg-6 mb-12">
-              <div class="post-wrapper">
-                <div class="post-wrapper d-flex align-items-end" style="background-image: url(<?php echo $image; ?>)">
-                  <div class="post-info-wrapper px-12 mb-12">
-                    <ul class="p-0 text-white mb-0"><li class="ms-6"><?php echo $date; ?></li></ul>
-                    <a href="<?php echo esc_url( $post_link ); ?>"><h3 class="text-white mb-0"><?php echo $post_title; ?></h3></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <?php
-        endforeach;
-        ?>
-      </div>
+							<?php 
+							foreach ( $posts as $key => $post ) :
+								$image = get_the_post_thumbnail_url($post);
+								$date = get_the_date('M, Y',$post);
+								$post_title = $post->post_title;
+								$post_link = get_permalink($post);
+									if ( $key == 0 ):
+										?>
+										<div class="col-lg-12 mb-12">
+											<div class="post-wrapper">
+												<div class="post-wrapper d-flex align-items-end" style="background-image: url(<?php echo $image; ?>)">
+													<div class="post-info-wrapper px-12 mb-12">
+														<ul class="p-0 text-white mb-0"><li class="ms-6"><?php echo $date; ?></li></ul>
+														<a href="<?php echo esc_url( $post_link ); ?>"><h3 class="text-white mb-0"><?php echo $post_title; ?></h3></a>
+													</div>
+												</div>
+											</div>
+										</div>
+									<?php
+									else: ?>
+										<div class="col-lg-4 mb-12">
+											<div class="post-wrapper">
+												<div class="post-wrapper d-flex align-items-end" style="background-image: url(<?php echo $image; ?>)">
+													<div class="post-info-wrapper px-12 mb-12">
+														<ul class="p-0 text-white mb-0"><li class="ms-6"><?php echo $date; ?></li></ul>
+														<a href="<?php echo esc_url( $post_link ); ?>"><h3 class="text-white mb-0"><?php echo $post_title; ?></h3></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<?php
+									endif;
+							endforeach;
+							?>
+						</div>
+					</div>
     </div>
   </section>
 <?php

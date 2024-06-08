@@ -74,56 +74,6 @@ $count = count($terms);
 				?>
 				<section class="section-archive-posts">
 					<div class="container">
-						<?php
-							if( $term_object->parent == 0 & $count > 0):
-								?>
-								<div class="category-repeater mb-10 mb-lg-18 position-relative">
-									<div class="swiper sub-categories">
-										<div class="swiper-wrapper" style="height: 320px">
-											<?php
-											if ( $terms ):
-												foreach ( $terms as $term ) :
-													$image = get_field('category_image', $term);
-													$term_title = $term->name;
-													$term_link = get_term_link($term->term_id);
-													?>
-													<div class="swiper-slide">
-														<div class="term-wrapper mb-lg-0 position-relative d-flex align-items-end h-100" style="background-image: url(<?php echo $image['url']; ?>)">
-															<div class="term-info-wrapper ms-6">
-																<a href="<?php echo esc_url( $term_link ); ?>"><h4 class="txt-white lh-1 mb-2"><?php echo $term_title; ?></h4></a>
-																<ul class="p-0">
-																	<li class="text-white ms-6"><?php echo $term->count; ?> postova</li>
-																</ul>
-															</div>
-														</div>
-													</div>
-													<?php 
-												endforeach;
-											endif;
-											?>
-										</div>
-									</div>
-									<div class="swiper-button-next swiper-button-next-sub-categories d-none d-lg-flex bg-primary "></div>
-									<div class="swiper-button-prev swiper-button-prev-sub-categories d-none d-lg-flex bg-primary "></div>
-									<div class="swiper-pagination"></div>
-								</div>
-								<?php
-							endif;
-						if ( $term_object->parent == 0 ):
-							?>
-							<div class="sub-title-wrapper mb-10 mb-lg-18 pt-18">
-								<div class="row">
-									<div class="col-12 col-lg-6 d-lg-flex align-items-lg-end mb-6 mb-lg-0">
-										<h3 class="m-0 text-primary"><?php echo $sub_title; ?></h3>
-									</div>
-									<div class="col-12 col-lg-6 d-lg-flex justify-content-lg-end align-items-lg-end">
-										<span class="text-primary fw-bold"><?php echo $term_object->count; ?> postova</span>
-									</div>
-								</div>
-							</div>
-						<?php
-						endif;
-						?>
 						<div class="row">
 							<?php 
 							foreach ( $posts as $key => $post ) :
@@ -131,18 +81,32 @@ $count = count($terms);
 								$date = get_the_date('M, Y',$post);
 								$post_title = $post->post_title;
 								$post_link = get_permalink($post);
-									?>
-									<div class="col-lg-6 mb-12">
-										<div class="post-wrapper">
-											<div class="post-wrapper d-flex align-items-end" style="background-image: url(<?php echo $image; ?>)">
-												<div class="post-info-wrapper px-12 mb-12">
-													<ul class="p-0 text-white mb-0"><li class="ms-6"><?php echo $date; ?></li></ul>
-													<a href="<?php echo esc_url( $post_link ); ?>"><h3 class="text-white mb-0"><?php echo $post_title; ?></h3></a>
+									if ( $key == 0 ):
+										?>
+										<div class="col-lg-12 mb-12">
+											<div class="post-wrapper">
+												<div class="post-wrapper d-flex align-items-end" style="background-image: url(<?php echo $image; ?>)">
+													<div class="post-info-wrapper px-12 mb-12">
+														<ul class="p-0 text-white mb-0"><li class="ms-6"><?php echo $date; ?></li></ul>
+														<a href="<?php echo esc_url( $post_link ); ?>"><h3 class="text-white mb-0"><?php echo $post_title; ?></h3></a>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
 									<?php
+									else: ?>
+										<div class="col-lg-4 mb-12">
+											<div class="post-wrapper">
+												<div class="post-wrapper d-flex align-items-end" style="background-image: url(<?php echo $image; ?>)">
+													<div class="post-info-wrapper px-12 mb-12">
+														<ul class="p-0 text-white mb-0"><li class="ms-6"><?php echo $date; ?></li></ul>
+														<a href="<?php echo esc_url( $post_link ); ?>"><h3 class="text-white mb-0"><?php echo $post_title; ?></h3></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<?php
+									endif;
 							endforeach;
 							?>
 						</div>
