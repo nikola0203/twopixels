@@ -48,9 +48,9 @@ Thumbs.db
 
 # Composer #
 ##########
-vendor
-!assets/js/vendor/
-composer.lock
+# vendor
+# !assets/js/vendor/
+# composer.lock
 
 # JSHint #
 ##########
@@ -76,11 +76,11 @@ yarn.lock
 
 # Compiled Files and Build Dirs #
 ##########
-/README.html
-/build/
-/assets/dist/css/*.css
-/assets/dist/js/*.js
-mix-manifest.json
+# /README.html
+# /build/
+# /assets/dist/css/*.css
+# /assets/dist/js/*.js
+# mix-manifest.json
 
 # PhpStrom Project Files #
 .idea/
