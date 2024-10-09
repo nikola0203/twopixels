@@ -29,4 +29,15 @@ footer {
 		color: $gray;
 		margin: 0;
 	}
+
+	.footer-socials {
+		a {
+			color: $white;
+			transition: color 0.5s;
+		}
+
+		a:hover {
+			color: darken($white, 50%);
+		}
+	}
 }

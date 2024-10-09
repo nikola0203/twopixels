@@ -95,7 +95,7 @@ $count = count($terms);
 										</div>
 									<?php
 									else: ?>
-										<div class="col-lg-4 mb-12">
+										<div class="col-lg-6 mb-12">
 											<div class="post-wrapper">
 												<div class="post-wrapper d-flex align-items-end" style="background-image: url(<?php echo $image; ?>)">
 													<div class="post-info-wrapper px-12 mb-12">

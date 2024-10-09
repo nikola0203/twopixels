@@ -4,7 +4,7 @@
   }
 
   .single-container {
-    padding: 0 284px;
+    padding: 0 220px;
 
     .wp-block-image+p {
       margin-top: 64px;
@@ -48,7 +48,7 @@
     }
 
     @include media-breakpoint-down(xxl) {
-      padding: 0 200px;
+      padding: 0 175px;
 
       p,
       h3,

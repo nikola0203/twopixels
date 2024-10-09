@@ -13,6 +13,10 @@
   .post-wrapper {
     height: 600px;
 
+    @include media-breakpoint-down(md) {
+      height: 400px;
+    }
+
     .category-wrapper {
       top: 16px;
       right: 16px;

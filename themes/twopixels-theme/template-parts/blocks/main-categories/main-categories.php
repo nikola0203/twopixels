@@ -49,9 +49,10 @@ $archive_link = get_post_type_archive_link( 'post' );
                 <?php
                 foreach ( $categories as $category ):
                   if ( $category->parent != 0 ):
+                    $category_link = get_term_link($category);
                     ?>
                     <div class="category-wrapper position-absolute py-4 px-8 bg-white" >
-                      <span><?php echo $category->name; ?></span>
+                      <a href="<?php echo $category_link; ?>"><span><?php echo $category->name; ?></span></a>
                     </div>
                     <?php
                   endif;

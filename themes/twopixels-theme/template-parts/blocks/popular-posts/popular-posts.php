@@ -35,7 +35,7 @@ $recent_posts = get_posts($args);
         </div>
       </div>
       <div class="swiper popular-services">
-        <div class="swiper-wrapper" style="height: 600px">
+        <div class="swiper-wrapper">
         <?php
         if ( $popular_posts ):
           Custom::getPopularPosts($popular_posts);

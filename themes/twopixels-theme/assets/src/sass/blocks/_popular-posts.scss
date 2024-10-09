@@ -47,11 +47,22 @@
 
     .swiper-pagination-bullet {
       border-radius: 0;
-
+      background-color: $gray;
+      border-color: $light-grey;
     }
 
     .swiper-pagination-bullet-active {
-      background-color: $primary;
+      background-color: $primary !important;
+      border-color: $black !important;
     }
+
+  }
+}
+
+.swiper-wrapper {
+  height: 600px !important;
+
+  @include media-breakpoint-down(md) {
+    height: 400px !important;
   }
 }

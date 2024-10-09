@@ -23554,6 +23554,13 @@ footer p {
   color: #D4D4D4;
   margin: 0;
 }
+footer .footer-socials a {
+  color: #FFFFFF;
+  transition: color 0.5s;
+}
+footer .footer-socials a:hover {
+  color: gray;
+}
 
 #secondary-menu-container ul {
   margin-bottom: 0;
@@ -23635,6 +23642,12 @@ footer p {
 .section-popular-posts .post-wrapper {
   height: 600px;
 }
+@media (max-width: 767.98px) {
+  .section-posts .post-wrapper,
+  .section-popular-posts .post-wrapper {
+    height: 400px;
+  }
+}
 .section-posts .post-wrapper .category-wrapper,
 .section-popular-posts .post-wrapper .category-wrapper {
   top: 16px;
@@ -23693,10 +23706,22 @@ footer p {
 .section-popular-posts .swiper-pagination-bullets .swiper-pagination-bullet,
 .section-archive-posts .swiper-pagination-bullets .swiper-pagination-bullet {
   border-radius: 0;
+  background-color: #D4D4D4;
+  border-color: #A3A1AB;
 }
 .section-popular-posts .swiper-pagination-bullets .swiper-pagination-bullet-active,
 .section-archive-posts .swiper-pagination-bullets .swiper-pagination-bullet-active {
-  background-color: #242424;
+  background-color: #242424 !important;
+  border-color: #000000 !important;
+}
+
+.swiper-wrapper {
+  height: 600px !important;
+}
+@media (max-width: 767.98px) {
+  .swiper-wrapper {
+    height: 400px !important;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -23729,7 +23754,7 @@ footer p {
   list-style-type: square;
 }
 .section-single-page-content .single-container {
-  padding: 0 284px;
+  padding: 0 220px;
 }
 .section-single-page-content .single-container .wp-block-image + p {
   margin-top: 64px;
@@ -23771,7 +23796,7 @@ footer p {
 }
 @media (max-width: 1399.98px) {
   .section-single-page-content .single-container {
-    padding: 0 200px;
+    padding: 0 175px;
   }
   .section-single-page-content .single-container p,
   .section-single-page-content .single-container h3,
