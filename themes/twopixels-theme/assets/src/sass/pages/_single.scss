@@ -1,7 +1,36 @@
-.section-single-page-content {
-  .category-name {
-    list-style-type: square;
+.breadcrums {
+
+  a span {
+    transition: color 0.5s ease, transform 0.5s ease;
+
+    &:hover {
+      color: darken($info, 50%);
+      transition: color 0.5s ease, transform 0.5s ease;
+    }
   }
+}
+
+.date-wrapper {
+  a:hover {
+    color: lighten($black, 30%);
+  }
+
+  .category-link::before {
+    content: "■ ";
+    font-size: 0.8em;
+    color: black;
+    align-items: center;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+  }
+
+  .category-link .category-name {
+    vertical-align: middle;
+  }
+}
+
+.section-single-page-content {
 
   .single-container {
     padding: 0 220px;
@@ -89,6 +118,14 @@
       margin-top: -102px;
       z-index: 1;
 
+      @include media-breakpoint-down(md) {
+        background-color: $light !important;
+
+        div {
+          border: none !important;
+        }
+      }
+
       p {
         padding: 0;
         @include font-size(18px);
@@ -103,6 +140,10 @@
 
     iframe {
       width: 100%;
+
+      @include media-breakpoint-down(md) {
+        height: 300px;
+      }
     }
 
     .wp-block-columns {
@@ -312,9 +353,19 @@
 }
 
 .section-newsletter {
+  background-image: url("http://localhost/wp-content/themes/twopixels-theme/assets/src/sass/img/pattern.png");
+  background-size: auto;
+  background-repeat: repeat;
+  height: 100%;
+
   .contact-form {
     @include media-breakpoint-up(lg) {
       width: 75%;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 100% !important;
+      display: block !important;
     }
   }
 
@@ -335,7 +386,7 @@
     }
 
     @include media-breakpoint-down(md) {
-      width: 75% !important;
+      width: 100% !important;
       display: block;
     }
   }

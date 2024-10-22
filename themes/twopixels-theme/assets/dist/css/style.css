@@ -23750,9 +23750,30 @@ footer .footer-socials a:hover {
   }
 }
 
-.section-single-page-content .category-name {
-  list-style-type: square;
+.breadcrums a span {
+  transition: color 0.5s ease, transform 0.5s ease;
 }
+.breadcrums a span:hover {
+  color: #111111;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.date-wrapper a:hover {
+  color: #4d4d4d;
+}
+.date-wrapper .category-link::before {
+  content: "■ ";
+  font-size: 0.8em;
+  color: black;
+  align-items: center;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+}
+.date-wrapper .category-link .category-name {
+  vertical-align: middle;
+}
+
 .section-single-page-content .single-container {
   padding: 0 220px;
 }
@@ -23841,6 +23862,14 @@ footer .footer-socials a:hover {
   margin-top: -102px;
   z-index: 1;
 }
+@media (max-width: 767.98px) {
+  .section-single-page-content .single-container .section-post-data {
+    background-color: #F5F4F2 !important;
+  }
+  .section-single-page-content .single-container .section-post-data div {
+    border: none !important;
+  }
+}
 .section-single-page-content .single-container .section-post-data p {
   padding: 0;
   font-size: 1.125rem;
@@ -23851,6 +23880,11 @@ footer .footer-socials a:hover {
 }
 .section-single-page-content .single-container iframe {
   width: 100%;
+}
+@media (max-width: 767.98px) {
+  .section-single-page-content .single-container iframe {
+    height: 300px;
+  }
 }
 .section-single-page-content .single-container .wp-block-columns {
   display: flex;
@@ -24029,9 +24063,21 @@ footer .footer-socials a:hover {
   background-color: #FFFFFF;
 }
 
+.section-newsletter {
+  background-image: url("http://localhost/wp-content/themes/twopixels-theme/assets/src/sass/img/pattern.png");
+  background-size: auto;
+  background-repeat: repeat;
+  height: 100%;
+}
 @media (min-width: 992px) {
   .section-newsletter .contact-form {
     width: 75%;
+  }
+}
+@media (max-width: 767.98px) {
+  .section-newsletter .contact-form {
+    width: 100% !important;
+    display: block !important;
   }
 }
 .section-newsletter input {
@@ -24050,7 +24096,7 @@ footer .footer-socials a:hover {
 }
 @media (max-width: 767.98px) {
   .section-newsletter label {
-    width: 75% !important;
+    width: 100% !important;
     display: block;
   }
 }

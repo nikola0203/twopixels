@@ -170,7 +170,7 @@ class Custom
           ?>
           <div class="post-info-wrapper px-12 mb-12">
             <ul class="p-0 mb-4"><li class="text-white ms-6"><?php echo $date; ?></li></ul>
-            <a href="<?php echo esc_url( $post_link ); ?>"><h3 class="text-white"><?php echo $post_title; ?></h3></a>
+            <a href="<?php echo esc_url( $post_link ); ?>"><h4 class="text-white"><?php echo $post_title; ?></h4></a>
           </div>
         </div>
       </div>

@@ -20,18 +20,18 @@ $difficulty       = get_field('difficulty');
 ?>
 
 <section class="section-post-data bg-white position-relative mb-10 mb-lg-18">
-  <div class="d-flex justify-content-around pt-10 pt-lg-14  pb-12 pb-lg-18 border-bottom border-dark text-center">
-    <div class="">
+  <div class="row d-flex justify-content-around pt-10 pt-lg-14  pb-12 pb-lg-18 border-bottom border-dark text-center">
+    <div class="col-sm-12 col-md-4 mb-3">
       <?php Acf::image( $distance_icon, 'thumbnail', 'mb-4' ); ?>
       <p class="p-big text-primary fw-500"><?php echo $distance_title; ?></p>
       <h4 class="fw-bold text-primary"><?php echo $distance; ?></h4>
     </div>
-    <div class="">
+    <div class="col-sm-12 col-md-4 mb-3">
       <?php Acf::image( $altitude_icon, 'thumbnail', 'mb-4' ); ?>
       <p class="p-big text-primary fw-500"><?php echo $altitude_title; ?></p>
       <h4 class="fw-bold text-primary"><?php echo $altitude; ?></h4>
     </div>
-    <div class="">
+    <div class="col-sm-12 col-md-4">
       <?php Acf::image( $difficulty_icon, 'thumbnail', 'mb-4' ); ?>
       <p class="p-big text-primary fw-500"><?php echo $difficulty_title; ?></p>
       <?php

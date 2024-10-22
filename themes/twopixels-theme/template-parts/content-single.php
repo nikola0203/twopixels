@@ -11,6 +11,7 @@ $s = get_cat_name($post_category);
 foreach ( $post_category as $category ):
   if ( $category->parent != 0 ):
     $category_name = $category->name;
+    $category_url = get_category_link($category);
   endif;
 endforeach;
 ?>
@@ -18,12 +19,12 @@ endforeach;
     <div class="container d-flex justify-content-center">
       <div class="single-post-info text-center w-75">
         <div class="breadcrums mb-12 text-info">
-          <span class="me-5">Početna</span><span class="me-5">></span><span class="me-5">Blog</span><span class="me-5">></span><span class=""><?php the_title(); ?></span>
+          <a href="<?php echo get_home_url(); ?>" class="text-info fw-normal"><span class="me-5">Početna</span></a><span class="me-5">></span><a href="<?php echo esc_url($category_url); ?>" class="text-info fw-normal"><span class="me-5"><?php echo $category_name; ?></span></a><span class="me-5">></span><span class=""><?php the_title(); ?></span>
         </div>
         <h1 class="mb-12"><?php the_title(); ?></h1>
-        <div class="date-wrapper">
+        <div class="date-wrapper text-black">
           <span><?php echo $date; ?></span>
-          <span class="category-name"><?php echo $category_name; ?></span>
+          <a href="<?php echo esc_url( $category_url ); ?>" class="fw-normal category-link ms-2"><span class="category-name ms-2"><?php echo $category_name; ?></span></a>
         </div>
       </div>
     </div>
