@@ -5,5 +5,17 @@
     "/js/manifest.js": "/js/manifest.js",
     "/css/admin.css": "/css/admin.css",
     "/css/style.css": "/css/style.css",
-    "/js/vendor.js": "/js/vendor.js"
+    "/js/vendor.js": "/js/vendor.js",
+    "/img/bg-popup-column.jpg": "/img/bg-popup-column.jpg",
+    "/img/checkmark.svg": "/img/checkmark.svg",
+    "/img/cta-bg.jpg": "/img/cta-bg.jpg",
+    "/img/icon-angle-90.svg": "/img/icon-angle-90.svg",
+    "/img/icon-angle-big.svg": "/img/icon-angle-big.svg",
+    "/img/icon-checkmark-v2.svg": "/img/icon-checkmark-v2.svg",
+    "/img/icon-minus.svg": "/img/icon-minus.svg",
+    "/img/icon-plus.svg": "/img/icon-plus.svg",
+    "/img/logo-cta.png": "/img/logo-cta.png",
+    "/img/logo-footer.png": "/img/logo-footer.png",
+    "/img/pattern.jpg": "/img/pattern.jpg",
+    "/img/pattern.png": "/img/pattern.png"
 }

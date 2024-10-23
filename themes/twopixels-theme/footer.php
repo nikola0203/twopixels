@@ -10,15 +10,13 @@
  */
 use Awpt\Custom\Footer;
 use Awpt\Plugins\Acf;
-$settings = get_field( 'footer_settings','option' );
-$text  = ( ! empty( $settings['text'] ) ) ? $settings['text'] : '';
+$settings       = get_field( 'footer_settings','option' );
+$text           = ( ! empty( $settings['text'] ) ) ? $settings['text'] : '';
 $facebook_link  = ( ! empty( $settings['facebook_link'] ) ) ? $settings['facebook_link'] : '';
-$instagram_link  = ( ! empty( $settings['instagram_link'] ) ) ? $settings['instagram_link'] : '';
-$youtube_link  = ( ! empty( $settings['youtube_link'] ) ) ? $settings['youtube_link'] : '';
-$taxonomies  = ( ! empty( $settings['taxonomy'] ) ) ? $settings['taxonomy'] : '';
+$instagram_link = ( ! empty( $settings['instagram_link'] ) ) ? $settings['instagram_link'] : '';
+$youtube_link   = ( ! empty( $settings['youtube_link'] ) ) ? $settings['youtube_link'] : '';
+$taxonomies     = ( ! empty( $settings['taxonomy'] ) ) ? $settings['taxonomy'] : '';
 ?>
-
-
 	<footer id="colophon" class="site-footer bg-primary py-12 pt-md-22 pb-md-12 text-white">
 		<div class="site-info">
 			<div class="container">
@@ -34,30 +32,44 @@ $taxonomies  = ( ! empty( $settings['taxonomy'] ) ) ? $settings['taxonomy'] : ''
 						<h4>Sve kategorije</h4>
 						<div class="row">
 							<div class="col-sm-6">
-								<ul> 
-									<?php
-										foreach ( $taxonomies as $taxonomy_key => $taxonomy ):
+								<?php
+								if ( ! empty( $taxonomies ) ) :
+									?>
+									<ul> 
+										<?php
+										foreach ( $taxonomies as $taxonomy_key => $taxonomy ) :
 											$taxonomy_link = get_term_link( $taxonomy );
-											if ( $taxonomy_key < 4 ): ?>
+											if ( $taxonomy_key < 4 ) :
+												?>
 												<li><a href="<?php echo $taxonomy_link; ?>"><?php echo $taxonomy->name; ?></a></li>
 												<?php
 											endif; 
 										endforeach;
-									?>
-								</ul>
+										?>
+									</ul>
+									<?php
+								endif;
+								?>
 							</div>
 							<div class="d-none d-md-block col-sm-6">
-								<ul> 
-									<?php
-										foreach ( $taxonomies as $taxonomy_key => $taxonomy ): 
+								<?php
+								if ( ! empty( $taxonomies ) ) :
+									?>
+									<ul>
+										<?php
+										foreach ( $taxonomies as $taxonomy_key => $taxonomy ) : 
 											$taxonomy_link = get_term_link( $taxonomy );
-											if ( $taxonomy_key > 3 & $taxonomy_key < 8 ): ?>
+											if ( $taxonomy_key > 3 & $taxonomy_key < 8 ):
+												?>
 												<li><a href="<?php echo $taxonomy_link; ?>"><?php echo $taxonomy->name; ?></a></li>
 												<?php
 											endif;  
 										endforeach;
-									?>
-								</ul>
+										?>
+										</ul>
+									<?php
+								endif;
+								?>
 							</div>
 						</div>
 					</div>

@@ -23,7 +23,7 @@ final class Init
 			Core\Sidebar::class,
 			Core\Widgets\TextWidget::class,
 			Core\Blocks::class,
-			Core\Comments::class,
+			// Core\Comments::class,
 			Core\OptionsPages::class, 
 			Core\Shortcodes::class,
 			Core\Taxonomies::class,
