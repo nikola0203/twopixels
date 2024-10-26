@@ -38,17 +38,16 @@ $count = count($terms);
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
-				<header>
-					<section class="archive-menu bg-primary mb-lg-18">
-						<nav id="site-navigation" role="navigation" class="container d-lg-flex align-items-lg-center">
-							<div class="pt-7 nav-logo-btn-wrapper d-flex align-items-center">
-								<div class="navtoggle relative d-flex justify-content-end align-items-center d-lg-none">
+					<section class="archive-menu bg-primary mb-8 mb-lg-18">
+						<nav id="archive-navigation" role="navigation" class="container d-lg-flex align-items-lg-center">
+							<div class="justify-content-end pe-8 pt-lg-7 nav-logo-btn-wrapper d-flex align-items-center">
+								<div class="navtoggle relative d-flex justify-content-end align-items-center d-lg-none" id="secondary-nav-toggle">
 									<div class="navtoggle__icon"></div>
 								</div>
 							</div>
-							<div class="mt-8">
+							<div class="mt-lg-8">
 								<?php
-								if ( has_nav_menu( 'primary' ) ) :
+								if ( has_nav_menu( 'secondary' ) ) :
 									wp_nav_menu(
 										array(
 											'theme_location'  => 'secondary',
@@ -66,7 +65,6 @@ $count = count($terms);
 					<div class="container">
 						<h1 class="text-center mb-18">Svi postovi</h1>
 					</div>
-				</header>
 				<?php
 			endif;
 
@@ -123,7 +121,7 @@ $count = count($terms);
 
 		endif;
 		?>
-
+	
 	</main><!-- #main -->
 
 <?php

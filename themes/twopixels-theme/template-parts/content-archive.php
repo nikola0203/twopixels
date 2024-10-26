@@ -24,29 +24,29 @@ $terms = get_terms($terms_args);
 $count = count($terms);
 $count_posts = count($posts);
 ?>
-  <section class="archive-menu bg-primary mb-lg-22">
-		<nav id="site-navigation" role="navigation" class="container d-lg-flex align-items-lg-center">
-			<div class="pt-7 nav-logo-btn-wrapper d-flex align-items-center">
-				<div class="navtoggle relative d-flex justify-content-end align-items-center d-lg-none">
-					<div class="navtoggle__icon"></div>
-				</div>
-			</div>
-			<div class="mt-8">
-				<?php
-				if ( has_nav_menu( 'primary' ) ) :
-					wp_nav_menu(
-						array(
-							'theme_location'  => 'secondary',
-							'menu_id'         => 'secondary-menu',
-							'menu_class'      => 'menu d-lg-flex align-items-lg-center ps-0',
-							'container_id'    => 'secondary-menu-container',
-							'container_class' => 'ms-lg-auto',
-						)
-					);
-				endif;
-				?>
-			</div>
-		</nav>
+  <section class="archive-menu bg-primary mb-8 mb-lg-18">
+    <nav id="archive-navigation" role="navigation" class="container d-lg-flex align-items-lg-center">
+      <div class="justify-content-end pe-8 pt-lg-7 nav-logo-btn-wrapper d-flex align-items-center">
+        <div class="navtoggle relative d-flex justify-content-end align-items-center d-lg-none" id="secondary-nav-toggle">
+          <div class="navtoggle__icon"></div>
+        </div>
+      </div>
+      <div class="mt-lg-8">
+        <?php
+        if ( has_nav_menu( 'secondary' ) ) :
+          wp_nav_menu(
+            array(
+              'theme_location'  => 'secondary',
+              'menu_id'         => 'secondary-menu',
+              'menu_class'      => 'menu d-lg-flex align-items-lg-center ps-0',
+              'container_id'    => 'secondary-menu-container',
+              'container_class' => 'ms-lg-auto',
+            )
+          );
+        endif;
+        ?>
+      </div>
+    </nav>
   </section>
   <section class="section-archive-posts">
     <div class="container">

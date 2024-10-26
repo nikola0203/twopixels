@@ -27,13 +27,13 @@ use Awpt\Plugins\Acf;
 <div id="page" class="site">
 	<header id="masthead" class="site-header bg-primary position-relative">
 		<nav id="site-navigation" role="navigation" class="container d-lg-flex align-items-lg-center">
-			<div class="pt-7 nav-logo-btn-wrapper d-flex align-items-center">
+			<div class="px-8 pt-7 nav-logo-btn-wrapper d-flex align-items-center justify-content-between" id="primary-nav-toggle">
 				<?php Awpt\Custom\Custom::site_logo(); ?>
 				<div class="navtoggle relative d-flex justify-content-end align-items-center d-lg-none">
 					<div class="navtoggle__icon"></div>
 				</div>
 			</div>
-			<div class="ms-lg-auto mt-8">
+			<div class="ms-lg-auto mt-lg-8">
 				<?php
 				if ( has_nav_menu( 'primary' ) ) :
 					wp_nav_menu(

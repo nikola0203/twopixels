@@ -1,11 +1,30 @@
+#archive-navigation {
+  .navtoggle__icon {
+    background-color: red;
+
+    &::before {
+      background-color: red;
+    }
+
+    &::after {
+      background-color: red;
+    }
+  }
+}
+
 #secondary-menu-container {
+
   ul {
     margin-bottom: 0;
   }
 
   li {
-    padding: 24px 0;
-    margin-right: 40px;
+    padding-bottom: 15px;
+
+    @include media-breakpoint-up(lg) {
+      padding: 24px 0;
+      margin-right: 40px;
+    }
 
     a {
       color: $info;
@@ -19,11 +38,32 @@
   .current-menu-item {
     padding-bottom: 20px;
 
-
     a {
       color: $white;
+
+      @include media-breakpoint-down(md) {
+        border-bottom: 2px solid $red ;
+        padding-bottom: 5px;
+      }
     }
 
-    border-bottom: 4px solid $red ;
+    @include media-breakpoint-up(lg) {
+      border-bottom: 4px solid $red ;
+    }
+  }
+}
+
+#primary-menu-container,
+#secondary-menu-container {
+  @include media-breakpoint-down(lg) {
+    display: none;
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+
+.custom-logo {
+  @include media-breakpoint-down(md) {
+    max-height: 40px;
   }
 }

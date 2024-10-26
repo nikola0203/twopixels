@@ -5,18 +5,34 @@ header {
 		margin: 0;
 
 		li {
-			padding: 14px 0;
-			margin-right: 40px;
+			padding-bottom: 15px;
 			font-weight: 500;
 
-			&:last-child {
-				margin-right: 0;
-			}
+			@include media-breakpoint-up(lg) {
+				margin-right: 40px;
+				padding: 14px 0;
 
+				&:last-child {
+					margin-right: 0;
+				}
+			}
 		}
 
 		.current-menu-item {
-			border-bottom: 2px solid $white;
+			@include media-breakpoint-down(lg) {
+				padding-bottom: 17px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				border-bottom: 2px solid $white;
+			}
+
+			@include media-breakpoint-down(lg) {
+				a {
+					border-bottom: 2px solid $white;
+					padding-bottom: 5px;
+				}
+			}
 		}
 
 	}

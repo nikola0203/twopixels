@@ -59,7 +59,7 @@ class Custom
     if ( ! empty( $headerSettings['logo'] ) ) {
       ?>
       <a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'name' ); ?>" class="custom-logo-link">
-        <img src="<?php echo esc_url( $headerSettings['logo']['sizes']['medium'] ); ?>" width="<?php esc_attr_e( $headerSettings['logo']['width'] ); ?>" height="<?php esc_attr_e( $headerSettings['logo']['height'] ); ?>" class="w-100 custom-logo d-none d-lg-block" alt="<?php bloginfo( 'name' ); ?>">
+        <img src="<?php echo esc_url( $headerSettings['logo']['sizes']['medium'] ); ?>" width="<?php esc_attr_e( $headerSettings['logo']['width'] ); ?>" height="<?php esc_attr_e( $headerSettings['logo']['height'] ); ?>" class="w-100 custom-logo" alt="<?php bloginfo( 'name' ); ?>">
       </a>
       <?php
     }

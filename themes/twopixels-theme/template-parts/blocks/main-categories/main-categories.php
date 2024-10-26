@@ -12,7 +12,7 @@ $posts = get_field( 'post_repeater' );
 $archive_link = get_post_type_archive_link( 'post' );
 ?>
 
-<section class="section-main-categories bg-primary pt-30">
+<section class="section-main-categories bg-primary pt-12 pt-lg-30">
   <div class="container">
     <h1 class="text-white text-center"><?php echo $title; ?></h1>
     <p class="text-white text-center"><?php echo $text; ?></p>

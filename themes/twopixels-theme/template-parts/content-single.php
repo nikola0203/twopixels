@@ -39,7 +39,7 @@ endforeach;
       </div>
     </div>
   </section>
-  <section class="section-comments bg-light py-18">
+  <section class="section-comments bg-light py-18 d-none">
     <div class="container">
       <div class="single-container">
         <div class="comments-container">

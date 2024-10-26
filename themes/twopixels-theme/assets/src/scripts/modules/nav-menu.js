@@ -168,5 +168,21 @@ class NavMenu {
     })
   }
 }
+document.addEventListener("DOMContentLoaded", function () {
+  // Toggle for Primary Navbar
+  const primaryToggleButton = document.getElementById("primary-nav-toggle");
+  const primaryMenuContainer = document.getElementById("primary-menu-container");
 
+  primaryToggleButton.addEventListener("click", function () {
+    primaryMenuContainer.classList.toggle("d-block");
+  });
+
+  // Toggle for Secondary Navbar
+  const secondaryToggleButton = document.getElementById("secondary-nav-toggle");
+  const secondaryMenuContainer = document.getElementById("secondary-menu-container");
+
+  secondaryToggleButton.addEventListener("click", function () {
+    secondaryMenuContainer.classList.toggle("d-block");
+  });
+});
 export default NavMenu
